@@ -122,9 +122,9 @@ class FilterPlugin(BaseAdminPlugin):
                         field, self.request, lookup_params,
                         self.model, self.admin_view, field_path=field_path)
 
-                    if len(field_parts) > 1:
-                        # Add related model name to title
-                        spec.title = "%s %s" % (field_parts[-2].name, spec.title)
+#                     if len(field_parts) > 1:
+#                         # Add related model name to title
+#                         spec.title = "%s %s" % (field_parts[-2].name, spec.title)
 
                     # Check if we need to use distinct()
                     use_distinct = (use_distinct or
