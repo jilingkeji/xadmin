@@ -26,8 +26,7 @@ class AdminAuthenticationForm(AuthenticationForm):
         message = ERROR_MESSAGE
 
         if username and password:
-            self.user_cache = authenticate(
-                username=username, password=password)
+            self.user_cache = authenticate(request=self.request, username=username, password=password)
             if self.user_cache is None:
                 if u'@' in username:
                     User = get_user_model()
