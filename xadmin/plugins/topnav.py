@@ -13,7 +13,11 @@ class TopNavPlugin(BaseAdminPlugin):
 
     global_search_models = None
     global_add_models = None
+    enable_global_search_add = False
 
+    def init_request(self, *args, **kwargs):
+        return self.enable_global_search_add
+    
     def get_context(self, context):
         return context
 
